@@ -1,41 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:16 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/10/19 13:57:34 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/10/19 14:07:46 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 
-
-#include <stdio.h>
-
-char *ft_strchr(const char *s, int c)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    while (*s)
-    {
-        if (*s == c)
-        {
-            return (char *)s ;
-        }
-        s++;
-    }   
-    if (c == '\0')
-    {
-        return (char *)s ;
-    }
-    
-    return NULL ;
-    
-}
+	size_t			i;
+	const unsigned char	*p1;
+	const unsigned char	*p2;
 
-int main(void){
-    char *s = "hello" ;
-    char c = 'l' ; 
-    char *test = ft_strchr(s , c) ; 
-    printf("%s" , test) ; 
+	p1 = (const unsigned char *)s1;
+	p2 = (const unsigned char *)s2;
+	i = 0;
+	while (i < n)
+	{
+		if (p1[i] != p2[i])
+			return (p1[i] - p2[i]);
+		i++;
+	}
+	return (0);
 }

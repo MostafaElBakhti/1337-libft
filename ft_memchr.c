@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:16 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/10/19 13:40:48 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/10/19 13:56:39 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 
-
-#include <stdio.h>
-
-char *ft_strchr(const char *s, int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-    while (*s)
-    {
-        if (*s == c)
-        {
-            return (char *)s ;
-        }
-        s++;
-    }   
-    if (c == '\0')
-    {
-        return (char *)s ;
-    }
-    
-    return NULL ;
-    
-}
+	size_t				i;
+	unsigned char		*ptr;
 
-int main(void){
-    char *s = "hello" ;
-    char c = 'l' ; 
-    char *test = ft_strchr(s , c) ; 
-    printf("%s" , test) ; 
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (ptr[i] == (unsigned char)c)
+			return ((void *)&ptr[i]);
+		i++;
+	}
+	return (NULL);
 }

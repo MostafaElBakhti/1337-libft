@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:16 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/10/19 13:39:28 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/10/19 13:39:29 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,19 @@
 
 #include <stdio.h>
 
-char *ft_strchr(const char *s, int c)
-{
+int ft_strlen(const char *s){
+    int i = 0 ;
     while (*s)
     {
-        if (*s == c)
-        {
-            return (char *)s ;
-        }
+        i++;
         s++;
-    }   
-    if (c == '\0')
-    {
-        return (char *)s ;
     }
-    
-    return NULL ;
-    
-}
+    return i ; 
+}   
+
 
 int main(void){
-    char *s = "hello" ;
-    char c = 'l' ; 
-    char *test = ft_strchr(s , c) ; 
-    printf("%s" , test) ; 
+    char *str = "test" ;
+    int test = ft_strlen(str) ;
+    printf("%d\n" , test);
 }

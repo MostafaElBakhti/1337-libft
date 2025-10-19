@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:16 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/10/19 13:38:46 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/10/19 13:38:47 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,18 @@
 
 #include <stdio.h>
 
-char *ft_strchr(const char *s, int c)
-{
-    while (*s)
-    {
-        if (*s == c)
-        {
-            return (char *)s ;
-        }
-        s++;
-    }   
-    if (c == '\0')
-    {
-        return (char *)s ;
+int ft_isalpha(int c){
+    if((c >= 'a' && c <= 'z') ||(c >= 'A' && c <= 'Z') ){
+        return 1 ; 
     }
-    
-    return NULL ;
-    
+    return 0 ;
 }
 
-int main(void){
-    char *s = "hello" ;
-    char c = 'l' ; 
-    char *test = ft_strchr(s , c) ; 
-    printf("%s" , test) ; 
+
+int main(void  ){
+    printf("%d\n", ft_isalpha(2)) ; 
+    printf("%d\n", ft_isalpha('a')) ; 
+    printf("%d\n", ft_isalpha('s')) ; 
+    printf("%d\n", ft_isalpha('0')) ; 
+    return 0 ;   
 }

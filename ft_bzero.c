@@ -1,41 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:16 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/10/16 15:52:49 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/10/16 16:30:05 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
 
-
-#include <stdio.h>
-
-char *ft_strchr(const char *s, int c)
+void ft_bzero(void *s, size_t n)
 {
-    while (*s)
+    size_t          i;
+    unsigned char   *p;
+
+    p = (unsigned char *)s;
+    i = 0;
+    while (i < n)
     {
-        if (*s == c)
-        {
-            return (char *)s ;
-        }
-        s++;
-    }   
-    if (c == '\0')
-    {
-        return (char *)s ;
+        p[i] = 0;
+        i++;
     }
-    
-    return NULL ;
-    
 }
 
-int main(void){
-    char *s = "hello" ;
-    char c = 'l' ; 
-    char *test = ft_strchr(s , c) ; 
-    printf("%s" , test) ; 
-}
+// int main(){
+//     char s[5] ;
+//     ft_bzero(s , 5) ; 
+//     for (int i = 0; i < 5; i++)
+//         printf("%d ", s[i]);
+// }

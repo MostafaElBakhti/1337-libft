@@ -1,41 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:16 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/10/19 16:52:20 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/10/19 18:08:05 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include <stdio.h>
+#include <stdlib.h> 
 
-char *ft_strchr(const char *s, int c)
-{
-    while (*s)
-    {
-        if (*s == c)
-        {
-            return (char *)s ;
-        }
-        s++;
-    }   
-    if (c == '\0')
-    {
-        return (char *)s ;
+void *ft_calloc(size_t count, size_t size){
+    size_t total = count * size ; 
+    unsigned char *ptr = malloc(total) ; 
+    if (ptr == NULL) return NULL;
+
+    for (size_t i = 0; i < total; i++) {
+        ptr[i] = 0;  
     }
-    
-    return NULL ;
-    
+    return ptr ; 
 }
 
-int main(void){
-    char *s = "hello" ;
-    char c = 'l' ; 
-    char *test = ft_strchr(s , c) ; 
-    printf("%s" , test) ; 
+int main(){
+    int *test = ft_calloc(3 , sizeof(int)) ; 
 }
