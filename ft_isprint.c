@@ -6,13 +6,12 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:02 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:02 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:14:42 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-#include <stdio.h>
 
 int ft_isprint(int c){
     if((c >= 0 && c <= 127)  ){

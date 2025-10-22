@@ -6,11 +6,11 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:52:49 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/16 16:30:05 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:14:16 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void ft_bzero(void *s, size_t n)
 {

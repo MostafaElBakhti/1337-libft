@@ -6,11 +6,11 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 15:37:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 16:50:41 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:14:13 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int ft_atoi(const char *str)
 {

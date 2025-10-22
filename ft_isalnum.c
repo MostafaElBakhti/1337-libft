@@ -6,12 +6,12 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:38:40 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:38:42 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:14:28 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include <stdio.h>
+#include "libft.h"
 
 int ft_isalnum(int c){
     if((c >= 'a' && c <= 'z') ||(c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') ){

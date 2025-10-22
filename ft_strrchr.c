@@ -6,13 +6,12 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:38 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:39 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:15:31 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-#include <stdio.h>
 
 
 char *strrchr(const char *s, int c){

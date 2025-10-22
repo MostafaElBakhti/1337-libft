@@ -6,13 +6,11 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:47 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:48 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:15:42 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#include <stdio.h>
+#include "libft.h"
 
 int ft_toupper(int c){
     if (c >= 97 && c <= 122)

@@ -6,13 +6,12 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:33 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:39:34 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:15:24 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-
-#include <stdio.h>
 
 int ft_strncmp(const char *s1, const char *s2, size_t n){
     size_t i = 0;

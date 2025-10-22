@@ -6,11 +6,12 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:40:48 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 13:56:39 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:14:45 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
+
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

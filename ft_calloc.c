@@ -6,12 +6,12 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 16:52:20 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/19 18:08:05 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:14:24 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h> 
+#include "libft.h"
+
 
 void *ft_calloc(size_t count, size_t size){
     size_t total = count * size ; 
