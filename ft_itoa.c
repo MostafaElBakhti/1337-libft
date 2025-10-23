@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:47 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/23 17:40:45 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/10/23 19:16:49 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/10/23 20:19:02 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-int ft_toupper(int c){
-    if (c >= 97 && c <= 122)
-    {
-        return c - 32 ;    
-    }
+char *ft_itoa(int n){
     
-
-    return c; 
+    
+    
 }
 
 int main(void){
-    char c1 = 'a';
-    char c2 = 'Z';
-    char c3 = '5';
-
-    printf("%c\n", ft_toupper(c1)); 
-    printf("%c\n", ft_toupper(c2)); 
-    printf("%c\n", ft_toupper(c3)); 
+    int num = -12345 ;
+    char *str = ft_itoa(num) ;
+    printf("%s\n" , str) ;
 }
