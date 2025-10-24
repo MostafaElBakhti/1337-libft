@@ -16,56 +16,62 @@
 
     size_t check_word(char const *s, char c)
     {
-
-        size_t count = 0;
-        int in_word = 0;
+        size_t count = 0 ; 
+        int in_word = 0 ; 
         while (*s)
         {
             if (*s != c && in_word == 0)
             {
-                in_word = 1;
-                count++;
+                in_word = 1 ;
+                count++ ;
+            }else if(*s == c){
+                in_word = 0 ;
             }
-            else if (*s == c)
-                in_word = 0;
-            s++;
+        s++ ;
         }
-        printf("Total words: %zu\n", count); 
-        return count;
+        return count ;
+
     }
 
+    size_t words_len(const char *s , char c)
+    {
+        size_t len = 0 ; 
+        while (s[len] && s[len] != c)
+        {
+            len++ ;
+        }
+        return len ;
+    }
     char **ft_split(char const *s, char c)
     {
-        if (!s)
-            return NULL;
-
-        size_t words = check_word(s, c);
-        char **ptr = malloc(sizeof(char *) * (words + 1));
+        size_t len ;
+        size_t i = 0  ;
+        size_t words = check_word(s , c) ; 
+        char **ptr = malloc((words + 1 ) * sizeof(char *)) ;
         if (!ptr)
-            return NULL;
+            return NULL ;
         
-        size_t i = 0;
-        while (*s)
-        {
-            while (*s == c)
-                s++ ; 
 
-            size_t len = 0;
-            while (s[len] && s[len] != c)  
-                len++;
-
-            char *word = malloc(len + 1);
-            if (!word)
-                return NULL;
-            ft_memcpy(word, s , len);
-            word[len] = '\0';
-            ptr[i++] = word;
-            
-            s+= len ;
-        }
-        ptr[i] = NULL;
-        return ptr;
+            while (*s)
+            {
+                while (*s == c)
+                    s++ ;
+                
+                if(*s)
+                {
+                    len = words_len(s, c) ;
+                    ptr[i] = malloc((len + 1 ) * sizeof(char)) ;
+                    memcpy(ptr[i] , s , len ) ; 
+                    ptr[i][len] = '\0' ;
+                    i++ ; 
+                    s+= len ;
+                }
+            }
+        ptr[i] = NULL ; 
+        return ptr ; 
+        
     }
+
 
     int main(void)
     {
