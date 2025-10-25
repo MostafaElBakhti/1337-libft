@@ -6,7 +6,18 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 13:48:30 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/25 13:48:31 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/10/25 14:03:18 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <unistd.h>
+
+void ft_putnbr_fd(int n, int fd){
+    
+}
+
+
+int main(){
+    ft_putnbr_fd(-21474836 , 1) ;
+}
