@@ -21,11 +21,11 @@ int ft_isprint(int c){
 }
 
 
-int main(void  ){
-    printf("%d\n", ft_isprint(2)) ; 
-    printf("%d\n", ft_isprint('a')) ; 
-    printf("%d\n", ft_isprint('s')) ; 
-    printf("%d\n", ft_isprint('0')) ; 
-    printf("%d\n", ft_isprint('5')) ; 
-    return 0 ;   
-}
+// int main(void  ){
+//     printf("%d\n", ft_isprint(2)) ; 
+//     printf("%d\n", ft_isprint('a')) ; 
+//     printf("%d\n", ft_isprint('s')) ; 
+//     printf("%d\n", ft_isprint('0')) ; 
+//     printf("%d\n", ft_isprint('5')) ; 
+//     return 0 ;   
+// }

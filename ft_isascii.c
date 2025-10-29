@@ -21,11 +21,11 @@ int ft_isascii(int c){
 }
 
 
-int main(void  ){
-    printf("%d\n", ft_isascii(2)) ; 
-    printf("%d\n", ft_isascii('a')) ; 
-    printf("%d\n", ft_isascii('s')) ; 
-    printf("%d\n", ft_isascii('0')) ; 
-    printf("%d\n", ft_isascii('5')) ; 
-    return 0 ;   
-}
+// int main(void  ){
+//     printf("%d\n", ft_isascii(2)) ; 
+//     printf("%d\n", ft_isascii('a')) ; 
+//     printf("%d\n", ft_isascii('s')) ; 
+//     printf("%d\n", ft_isascii('0')) ; 
+//     printf("%d\n", ft_isascii('5')) ; 
+//     return 0 ;   
+// }

@@ -61,8 +61,8 @@ char *ft_itoa(int n){
     return ptr ; 
 }
 
-int main(void){
-    int num = -12345 ;
-    char *str = ft_itoa(num) ;
-    printf("%s\n" , str) ;
-}
+// int main(void){
+//     int num = -12345 ;
+//     char *str = ft_itoa(num) ;
+//     printf("%s\n" , str) ;
+// }

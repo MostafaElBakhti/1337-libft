@@ -37,9 +37,9 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     return (substr);
 }
 
-int main(void){
-    char *s = "hello world" ;
-    char *test = ft_substr(s , 3 , 6) ;
-    printf("%s" , test) ; 
+// int main(void){
+//     char *s = "hello world" ;
+//     char *test = ft_substr(s , 3 , 6) ;
+//     printf("%s" , test) ; 
     
-}
+// }

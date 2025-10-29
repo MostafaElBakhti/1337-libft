@@ -41,11 +41,11 @@ int ft_atoi(const char *str)
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    printf("%d\n", atoi("42"));         
-    printf("%d\n", atoi("   -123"));    
-    printf("%d\n", atoi("+456abc"));    
-    printf("%d\n", atoi("0"));          
-    printf("%d\n", atoi("  007"));      
-    return 0;
-}
+// int main() {
+//     printf("%d\n", atoi("42"));         
+//     printf("%d\n", atoi("   -123"));    
+//     printf("%d\n", atoi("+456abc"));    
+//     printf("%d\n", atoi("0"));          
+//     printf("%d\n", atoi("  007"));      
+//     return 0;
+// }

@@ -31,9 +31,9 @@ int ft_strncmp(const char *s1, const char *s2, size_t n){
     return (unsigned char)*s1 - (unsigned char)*s2;
 }
 
-int main(void){
-    char *s1 = "heflo"; 
-    char *s2 = "hello"; 
-    int test = ft_strncmp(s1 , s2 , 3); 
-    printf("%d\n", test);
-}
+// int main(void){
+//     char *s1 = "heflo"; 
+//     char *s2 = "hello"; 
+//     int test = ft_strncmp(s1 , s2 , 3); 
+//     printf("%d\n", test);
+// }

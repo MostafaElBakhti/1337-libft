@@ -22,12 +22,12 @@ int ft_toupper(int c){
     return c; 
 }
 
-int main(void){
-    char c1 = 'a';
-    char c2 = 'Z';
-    char c3 = '5';
+// int main(void){
+//     char c1 = 'a';
+//     char c2 = 'Z';
+//     char c3 = '5';
 
-    printf("%c\n", ft_toupper(c1)); 
-    printf("%c\n", ft_toupper(c2)); 
-    printf("%c\n", ft_toupper(c3)); 
-}
+//     printf("%c\n", ft_toupper(c1)); 
+//     printf("%c\n", ft_toupper(c2)); 
+//     printf("%c\n", ft_toupper(c3)); 
+// }

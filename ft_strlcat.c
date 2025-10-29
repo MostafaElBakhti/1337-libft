@@ -41,9 +41,9 @@ size_t ft_strlcat(char *dst, const char *src, size_t size){
 }
 
 
-int main(void){
-    char dest[6] = "Hi ";
-    char src[] = "World";
-    size_t test = ft_strlcat(dest, src, 6);
-    printf("%zu" , test) ;
-}
+// int main(void){
+//     char dest[6] = "Hi ";
+//     char src[] = "World";
+//     size_t test = ft_strlcat(dest, src, 6);
+//     printf("%zu" , test) ;
+// }

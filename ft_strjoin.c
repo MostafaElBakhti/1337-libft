@@ -29,9 +29,9 @@ char *ft_strjoin(char const *s1, char const *s2){
     return all_str ;
 }
 
-int main(void){
-    char *s1 = "hello " ;
-    char *s2 = "world!" ;
-    char *test = ft_strjoin(s1 , s2) ;
-    printf("%s\n" , test) ;
-}
+// int main(void){
+//     char *s1 = "hello " ;
+//     char *s2 = "world!" ;
+//     char *test = ft_strjoin(s1 , s2) ;
+//     printf("%s\n" , test) ;
+// }

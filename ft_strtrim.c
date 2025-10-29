@@ -50,12 +50,12 @@ char *ft_strtrim(char const *s1, char const *set){
     
 }
 
-int  main(){
-    char *s1 = "**hello /world***//" ;
-    char *set = "*/" ;
-    char *test = ft_strtrim(s1 , set) ;
-    printf("final results is :%s\n" , test) ;
+// int  main(){
+//     char *s1 = "**hello /world***//" ;
+//     char *set = "*/" ;
+//     char *test = ft_strtrim(s1 , set) ;
+//     printf("final results is :%s\n" , test) ;
     
 
-    return 0 ;
-}   
+//     return 0 ;
+// }   

@@ -32,9 +32,9 @@ char *ft_strchr(const char *s, int c)
     
 }
 
-int main(void){
-    char *s = "hello" ;
-    char c = 'l' ; 
-    char *test = ft_strchr(s , c) ; 
-    printf("%s" , test) ; 
-}
+// int main(void){
+//     char *s = "hello" ;
+//     char c = 'l' ; 
+//     char *test = ft_strchr(s , c) ; 
+//     printf("%s" , test) ; 
+// }

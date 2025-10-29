@@ -13,6 +13,7 @@
     #include "libft.h"
     #include <stdlib.h>
     #include <stdio.h>
+    #include <string.h>
 
     size_t check_word(char const *s, char c)
     {
@@ -48,16 +49,17 @@
         size_t i = 0  ;
         size_t words = check_word(s , c) ; 
         char **ptr = malloc((words + 1 ) * sizeof(char *)) ;
-        if (!ptr)
+        if(!ptr){
             return NULL ;
+        }
         
 
-            while (*s)
+            while(*s)
             {
                 while (*s == c)
                     s++ ;
                 
-                if(*s)
+                if (*s)
                 {
                     len = words_len(s, c) ;
                     ptr[i] = malloc((len + 1 ) * sizeof(char)) ;
@@ -73,15 +75,15 @@
     }
 
 
-    int main(void)
-    {
-        char *s = "hello world this is ft_split";
-        char c = ' ';
-        char **test = ft_split(s, c);
-        // for (size_t i = 0; test[i] != NULL; i++)
-        // {
-        //     printf("Word %zu: %s\n", i, test[i]);
-        // }
+    // int main(void)
+    // {
+    //     char *s = "hello world this is ft_split";
+    //     char c = ' ';
+    //     char **test = ft_split(s, c);
+    //     // for (size_t i = 0; test[i] != NULL; i++)
+    //     // {
+    //     //     printf("Word %zu: %s\n", i, test[i]);
+    //     // }
         
-        return 0;
-    }
+    //     return 0;
+    // }

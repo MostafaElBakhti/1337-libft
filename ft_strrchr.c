@@ -14,7 +14,7 @@
 
 
 
-char *strrchr(const char *s, int c){
+char *ft_strrchr(const char *s, int c){
     const char *test = NULL ;
     while (*s)
     {
@@ -32,9 +32,9 @@ char *strrchr(const char *s, int c){
 }
 
 
-int main(void){
-    char *s = "test" ;
-    char c = 'e' ; 
-    char *test = strrchr(s , c) ; 
-    printf("%s" , test) ; 
-}
+// int main(void){
+//     char *s = "test" ;
+//     char c = 'e' ; 
+//     char *test = strrchr(s , c) ; 
+//     printf("%s" , test) ; 
+// }

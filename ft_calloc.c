@@ -26,6 +26,6 @@ void *ft_calloc(size_t count, size_t size){
     return ptr ; 
 }
 
-int main(){
-    int *test = ft_calloc(3 , sizeof(int)) ; 
-}
+// int main(){
+//     int *test = ft_calloc(3 , sizeof(int)) ; 
+// }

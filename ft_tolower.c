@@ -23,12 +23,12 @@ int ft_tolower(int c){
     return c; 
 }
 
-int main(void){
-    char c1 = 'A';
-    char c2 = 'Z';
-    char c3 = '5';
+// int main(void){
+//     char c1 = 'A';
+//     char c2 = 'Z';
+//     char c3 = '5';
 
-    printf("%c\n", ft_tolower(c1)); // a
-    printf("%c\n", ft_tolower(c2)); // z
-    printf("%c\n", ft_tolower(c3)); // 5
-}
+//     printf("%c\n", ft_tolower(c1)); // a
+//     printf("%c\n", ft_tolower(c2)); // z
+//     printf("%c\n", ft_tolower(c3)); // 5
+// }

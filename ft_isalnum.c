@@ -21,11 +21,11 @@ int ft_isalnum(int c){
 }
 
 
-int main(void  ){
-    printf("%d\n", ft_isalnum(2)) ; 
-    printf("%d\n", ft_isalnum('a')) ; 
-    printf("%d\n", ft_isalnum('s')) ; 
-    printf("%d\n", ft_isalnum('0')) ; 
-    printf("%d\n", ft_isalnum('    ')) ; 
-    return 0 ;   
-}
+// int main(void  ){
+//     printf("%d\n", ft_isalnum(2)) ; 
+//     printf("%d\n", ft_isalnum('a')) ; 
+//     printf("%d\n", ft_isalnum('s')) ; 
+//     printf("%d\n", ft_isalnum('0')) ; 
+//     printf("%d\n", ft_isalnum('    ')) ; 
+//     return 0 ;   
+// }
