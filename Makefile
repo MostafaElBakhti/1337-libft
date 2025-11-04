@@ -18,7 +18,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 %.o: %.c libft.h
-	$(CC) $(CFLAGS) -c $< 
+	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME) : $(OBJS)
 	ar rcs $(NAME) $(OBJS)
@@ -26,8 +26,8 @@ $(NAME) : $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
-	@echo "🧹 Object files removed."
+	@echo " Object files removed."
 
 fclean: clean
 	$(RM) $(NAME)
-	@echo "🗑️  libft.a removed."
+	@echo " libft.a removed."
