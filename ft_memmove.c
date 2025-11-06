@@ -24,14 +24,17 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	s = (const unsigned char *)src;
 	i = 0;
 
-	if (!dst && !src)
+	if (!dst || !src)
     	return NULL;
+	
+	if(d == s)
+        return dst ;
 
 	if (d > s)
 	{
 		while (len > 0)
 		{
-			len--;
+			len-- ;
 			d[len] = s[len];
 		}
 		
@@ -50,7 +53,22 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 int main(){
     char src[] = "hello" ;
     // char dst[10] ;
-    ft_memmove(src+2 , src , 6);
+    ft_memmove(src+1 , src , sizeof(src));
+	src[6] = '\0' ; 
     // memcpy(dst , src , 5);
     printf("%s\n" , src) ; 
+
+
+	char src1[] = "abcdef";
+	char dst1[10];
+
+	ft_memmove(dst1, src1, 10);
+	printf("Test 1: %s\n", dst1);
+
+
+	char src5[] = "";
+char dst5[10];
+ft_memmove(dst5, src5, 1);
+printf("Test 5: %s\n", dst5);
+
 }

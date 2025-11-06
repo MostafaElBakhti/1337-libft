@@ -34,7 +34,7 @@ int	main(void)
 	char	s[6];
 
 	// ft_memset(s, 300, 5);
-	memset(s, 0, 5);
+	ft_memset(s, 0, 5);
 	s[5] = '\0';
 	printf(" my : %s\n", s);
 	return (0);
