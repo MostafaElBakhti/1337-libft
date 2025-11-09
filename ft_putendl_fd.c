@@ -1,38 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 16:52:20 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/22 10:14:24 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/11/09 12:20:45 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/11/09 12:20:45 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void *ft_calloc(size_t count, size_t size){
-    size_t total = count * size ; 
-    char *ptr = malloc(total) ; 
-    if (!ptr)
-    {
-        return NULL ; 
-    }
-    size_t i = 0 ;
-    ft_bzero(ptr ,total ) ; 
-
-    return ptr ; 
-    
+void ft_putendl_fd(char *s, int fd)
+{
+    ft_putstr_fd(s, fd); 
+    write(fd ,"\n",1 ) ; 
 }
 
-int main(){
-    char *test = ft_calloc(3, sizeof(char));
-
-    for (int i = 0; i < 3; i++)
-        printf("%d ", test[i]); 
-
-    free(test);
-    return 0;
-}
+// int main()
+// {
+//     ft_putendl_fd("hello" , 1) ; 
+// }

@@ -22,3 +22,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	new_str[i] = '\0';
 	return (new_str);
 }
+
+// char my_func(unsigned int i, char c)
+// {
+// 	if (i % 2 == 0)
+// 		return (c - 32); 
+// 	return (c);
+// }

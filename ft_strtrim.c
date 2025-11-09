@@ -14,48 +14,40 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int is_in_set(char c , char const *set){
-    while (*set){
-        if (c == *set)
-            return 1 ;
-        set++ ;
-    }
-    return 0 ;
-}
-
+  
 
 char *ft_strtrim(char const *s1, char const *set){
-    if(!s1 || !set)
-        return NULL ;
-    
-    while(*s1 && is_in_set(*s1 , set))
-        s1++ ;
-
-    size_t len = ft_strlen(s1) ;
-    printf("len after leading trim: %zu\n", len); // test line
-    
-    while (len > 0 && is_in_set(s1[len -1] , set))
+    if (!set || !s1)
     {
-        len-- ;
+        return NULL ; 
     }
-    printf("len after trailing trim: %zu\n", len); // test line
 
-    char *str = (char *)malloc(len + 1) ;
-    if (!str)
-        return NULL ;
+    while (*s1 && ft_strchr(set , *s1))
+        s1++ ;
     
-    ft_memcpy(str , s1 , len) ;
-    str[len] = '\0' ;
-    return str ;
+    size_t len = ft_strlen(s1) ; 
+
+    while (len > 0 && ft_strchr(set , s1[len-1]))
+    {
+        len-- ; 
+    }
+    
+    char *copy = malloc(len + 1 ) ; 
+    if(!copy)
+        return NULL; 
+    
+    memcpy(copy , s1 , len) ; 
+    copy[len] = '\0' ; 
+
+    return copy ; 
+    
     
 }
 
 // int  main(){
-//     char *s1 = "**hello /world***//" ;
-//     char *set = "*/" ;
+//     char *s1 = "//hello world//" ;
+//     char *set = "/" ;
 //     char *test = ft_strtrim(s1 , set) ;
 //     printf("final results is :%s\n" , test) ;
-    
 
-//     return 0 ;
 // }   
