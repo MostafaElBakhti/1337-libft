@@ -22,7 +22,7 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
     if (!dst || !src)
         return (NULL);
 
-    if(d == s)
+    if(d == s && dst != NULL)
         return dst ;
 
     while (i < n)
