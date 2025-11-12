@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:19 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/11/12 06:39:14 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 08:09:18 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t size){
     size_t dst_len = 0 ; 
     size_t src_len = 0 ; 
     size_t i = 0  ;
-    while (dst[dst_len])
+    while (dst_len < size && dst[dst_len])
     {
         dst_len++ ;
     }
@@ -25,7 +25,10 @@ size_t ft_strlcat(char *dst, const char *src, size_t size){
     {
         src_len++ ;
     }
- 
+
+    if (dst_len == size)
+        return size + src_len ;
+        
     if (dst_len < size)
     {
         while (src[i] && (dst_len + i) < size - 1 )

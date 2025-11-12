@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:38 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/22 10:15:31 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 08:25:34 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,17 @@
 
 char *ft_strrchr(const char *s, int c){
     const char *test = NULL ;
+    unsigned char ch = (unsigned char)c ;
     while (*s)
     {
-        if (*s == c)
+        if (*s == ch)
         {
             test = s ;
         }
         s++ ;
     }
 
-    if(c == '\0')
+    if(ch == '\0')
         return (char *)s ;
 
     return (char *)test ;

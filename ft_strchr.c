@@ -6,24 +6,26 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:15 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/11/12 05:51:57 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 08:21:00 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+#include <string.h>
 
 char *ft_strchr(const char *s, int c)
 {
+    unsigned char ch = (unsigned char)c ;
     while (*s)
     {
-        if (*s == c)
+        if (*s == ch)
         {
             return (char *)s ;
         }
         s++;
     }   
-    if (c == '\0')
+    if (ch == '\0')
     {
         return (char *)s ;
     }
@@ -32,6 +34,6 @@ char *ft_strchr(const char *s, int c)
     
 }
 // int main(void){
-//     printf("%s" , ft_strchr(NULL , 'h') ) ;
-//     printf("%s" , strchr(NULL , 'h') ) ;
+//     printf("%s\n" , ft_strchr("hello" , 1024) ) ;
+//     printf("%s" , strchr("hello"  , 1024) ) ;
 // }
