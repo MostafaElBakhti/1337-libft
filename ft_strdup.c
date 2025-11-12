@@ -6,32 +6,32 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 10:20:05 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/22 11:55:07 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 03:10:46 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char    *ft_strdup(const char *s1){
-    size_t len = ft_strlen(s1) ;
-    char *copy = malloc(len + 1 ) ;
+char	*ft_strdup(const char *s)
+{
+	char	*new_str;
+	size_t	i;
 
-    if (!copy)
-        return NULL ;
-    
-    ft_memcpy(copy , s1 , len) ; 
-
-    copy[len] = '\0';  
-    return copy ;
-    
+	new_str = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!new_str || !s)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		new_str[i] = s[i];
+		i++;
+	}
+	new_str[i] = '\0';
+	return (new_str);
 }
-
-
 // int main(void){
 //     char *s1 = "hello" ; 
 //     char *test = ft_strdup(s1) ; 
 //     printf("%s" , test ) ; 
-    
 //     return 0 ; 
 // }

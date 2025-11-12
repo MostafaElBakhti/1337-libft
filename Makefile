@@ -2,7 +2,7 @@
 
 
 NAME = libft.a
-CC = gcc 
+CC = cc 
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
@@ -31,3 +31,6 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 	@echo " libft.a removed."
+
+##  re : fclean all
+# .PHONY

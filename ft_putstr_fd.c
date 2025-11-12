@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:02 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/11/12 06:07:00 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/11/08 12:16:26 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/11/09 12:16:26 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
+void ft_putstr_fd(char *s, int fd){
 
-int ft_isprint(int c){
-    if((c >= 32 && c <= 126)  ){
-        return 1 ; 
-    }
-    return 0 ;
+    if(!s)
+        return ;
+    
+    write(fd , s ,ft_strlen(s) ) ; 
 }
-
-
-// int main(void  ){
-//     printf("%d\n", ft_isprint(2)) ; 
-//     printf("%d\n", ft_isprint('a')) ; 
-//     printf("%d\n", ft_isprint('s')) ; 
-//     printf("%d\n", ft_isprint('0')) ; 
-//     printf("%d\n", ft_isprint('5')) ; 
-//     return 0 ;   
-// }

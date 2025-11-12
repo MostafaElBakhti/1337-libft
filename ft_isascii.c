@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:38:53 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/22 10:14:37 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 06:06:52 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ int ft_isascii(int c){
     return 0 ;
 }
 
-int main(void  ){
-    for (int i = 0; i <= 255; i++)
-        printf("%d -> my : %d , original : %i\n" , i , ft_isascii(i) ,isascii(i) ) ;
+// int main(void  ){
+//     for (int i = 0; i <= 255; i++)
+//         printf("%d -> my : %d , original : %i\n" , i , ft_isascii(i) ,isascii(i) ) ;
     
 
-    return 0 ;   
-}
+//     return 0 ;   
+// }
     // printf("%d\n", ft_isalnum(2)) ; 
     // printf("%d\n", ft_isalnum('a')) ; 
     // printf("%d\n", ft_isalnum('s')) ; 

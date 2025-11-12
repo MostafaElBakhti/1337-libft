@@ -6,37 +6,43 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 16:30:24 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/11/04 17:26:38 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 05:24:08 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
-#include <stddef.h>
+#include <stdio.h>
 
 void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    size_t              i;
-    unsigned char       *dest;
-    const unsigned char *source;
+    char *d = (char *)dst ;
+    const char *s = (const char *)src ;
+    size_t i = 0 ; 
+    // ! no need to handle ;
+    // if (!dst || !src)
+    //     return (NULL); 
 
-    if (!dst || !src)
-        return (NULL);
-    if (dst == src || n == 0)
-        return (dst);
+    // if(d == s && d != NULL)
+    //     return dst ;
 
-    dest = (unsigned char *)dst;
-    source = (const unsigned char *)src;
-    i = 0;
     while (i < n)
     {
-        dest[i] = source[i];
-        i++;
+        d[i] = s[i] ;
+        i++ ; 
     }
-    return (dst);
+    return dst ;
+    
 }
-// int main(){
-//     char src[] = "hello" ;
-//     char dest[10] ;
-//     char *test = ft_memcpy(dest, src , 11);
-//     printf("%s\n" , test) ; 
+
+// int main()
+// {
+//     char src[] = "test" ; 
+//     printf("my f ; %s\n" , ft_memcpy(src, src+2  , 4)) ;
+//     printf("orignl : %s\n" , memcpy(src, src+2  , 4)) ;
+//     // printf("%s\n" , src) ;
+    
+//     //! undifined behavior >> n > sizeof(src)
 // }
+    // printf("my function : %s\n" , ft_memcpy(NULL , "NULL" , 3)) ;
+    // dest[3] = '\0' ; 

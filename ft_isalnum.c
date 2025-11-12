@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:38:40 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/22 10:14:28 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 06:06:46 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ int ft_isalnum(int c){
 }
 
 
-int main(void  ){
-    for (int i = '0'; i <= '9'; i++)
-        printf("%c -> my : %d , original : %i\n" , i , ft_isalnum(i) ,isalnum(i) ) ;
+// int main(void  ){
+//     for (int i = '0'; i <= '9'; i++)
+//         printf("%c -> my : %d , original : %i\n" , i , ft_isalnum(i) ,isalnum(i) ) ;
     
-    // printf("%d\n", ft_isalnum(2)) ; 
-    // printf("%d\n", ft_isalnum('a')) ; 
-    // printf("%d\n", ft_isalnum('s')) ; 
-    // printf("%d\n", ft_isalnum('0')) ; 
-    // printf("%d\n", ft_isalnum(' ')) ; 
-    return 0 ;   
-}
+//     // printf("%d\n", ft_isalnum(2)) ; 
+//     // printf("%d\n", ft_isalnum('a')) ; 
+//     // printf("%d\n", ft_isalnum('s')) ; 
+//     // printf("%d\n", ft_isalnum('0')) ; 
+//     // printf("%d\n", ft_isalnum(' ')) ; 
+//     return 0 ;   
+// }

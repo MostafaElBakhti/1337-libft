@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 15:52:49 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/22 10:14:16 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 06:06:38 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ void ft_bzero(void *s, size_t n)
     }
 }
 
-int main(){
-    char s[] = "test";
-    ft_bzero(s , 5) ; 
-    for (int i = 0; i < 5; i++)
-        printf("%d\n ", s[i]);
-}
+// int main(){
+//     char s[] = "test";
+//     ft_bzero(s , 5) ; 
+//     for (int i = 0; i < 5; i++)
+//         printf("%d\n ", s[i]);
+// }

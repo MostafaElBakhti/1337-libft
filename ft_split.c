@@ -6,84 +6,92 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:20:51 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/23 21:34:55 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 03:01:26 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-    #include "libft.h"
-    #include <stdlib.h>
-    #include <stdio.h>
-    #include <string.h>
+#include "libft.h"
 
-    size_t check_word(char const *s, char c)
-    {
-        size_t count = 0 ; 
-        int in_word = 0 ; 
-        while (*s)
-        {
-            if (*s != c && in_word == 0)
-            {
-                in_word = 1 ;
-                count++ ;
-            }else if(*s == c){
-                in_word = 0 ;
-            }
-        s++ ;
-        }
-        return count ;
+static size_t	count_words(const char *s, char c)
+{
+	size_t	count;
+	int		in_word;
 
-    }
+	count = 0;
+	in_word = 0;
+	while (*s)
+	{
+		if (*s != c && !in_word)
+		{
+			in_word = 1;
+			count++;
+		}
+		else if (*s == c)
+			in_word = 0;
+		s++;
+	}
+	return (count);
+}
 
-    size_t words_len(const char *s , char c)
-    {
-        size_t len = 0 ; 
-        while (s[len] && s[len] != c)
-        {
-            len++ ;
-        }
-        return len ;
-    }
-    char **ft_split(char const *s, char c)
-    {
-        size_t len ;
-        size_t i = 0  ;
-        size_t words = check_word(s , c) ; 
-        char **ptr = malloc((words + 1 ) * sizeof(char *)) ;
-        if(!ptr){
-            return NULL ;
-        }
-        
+static int	allocate_word_memory(char **ptr, size_t idx, int len)
+{
+	size_t	i;
 
-            while(*s)
-            {
-                while (*s == c)
-                    s++ ;
-                
-                if (*s)
-                {
-                    len = words_len(s, c) ;
-                    ptr[i] = malloc((len + 1 ) * sizeof(char)) ;
-                    memcpy(ptr[i] , s , len ) ; 
-                    ptr[i][len] = '\0' ;
-                    i++ ; 
-                    s+= len ;
-                }
-            }
-        ptr[i] = NULL ; 
-        return ptr ; 
-        
-    }
+	ptr[idx] = malloc(len + 1);
+	if (!ptr[idx])
+	{
+		i = 0;
+		while (i < idx)
+		{
+			free(ptr[i]);
+			i++;
+		}
+		free(ptr);
+		return (1);
+	}
+	return (0);
+}
 
+static int	fill_memory(char **ptr, const char *s, char c)
+{
+	size_t	idx;
+	int		len;
 
-    // int main(void)
-    // {
-    //     char *s = "hello world this is ft_split";
-    //     char c = ' ';
-    //     char **test = ft_split(s, c);
-    //     // for (size_t i = 0; test[i] != NULL; i++)
-    //     // {
-    //     //     printf("Word %zu: %s\n", i, test[i]);
-    //     // }
-        
-    //     return 0;
-    // }
+	idx = 0;
+	while (*s)
+	{
+		while (*s && *s == c)
+			s++;
+		len = 0;
+		while (s[len] && s[len] != c)
+		{
+			len++;
+		}
+		if (len != 0)
+		{
+			if (allocate_word_memory(ptr, idx, len) == 1)
+				return (1);
+			ft_strlcpy(ptr[idx], s, len + 1);
+			idx++;
+			s += len;
+		}
+	}
+	return (0);
+}
+
+char	**ft_split(const char *s, char c)
+{
+	char	**ptr;
+	size_t	words;
+
+	if (!s)
+		return (NULL);
+	words = count_words(s, c);
+	ptr = malloc((words + 1) * sizeof(char *));
+	if (!ptr)
+		return (NULL);
+	if (fill_memory(ptr, s, c) == 1)
+		return (NULL);
+	ptr[words] = NULL;
+	return (ptr);
+}

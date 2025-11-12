@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:38:58 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/22 10:14:39 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 06:06:56 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,20 @@ int ft_isdigit(int c){
 }
 
 
-int main(void  ){
-    // for (int i = '0'; i <= '9'; i++)
-    // printf("%c -> my: %d, original: %d\n", i, ft_isdigit(i), isdigit(i));
+// int main(void  ){
+//     // for (int i = '0'; i <= '9'; i++)
+//     // printf("%c -> my: %d, original: %d\n", i, ft_isdigit(i), isdigit(i));
 
-    for (int i = '0'; i < '9'; i++)
-    {
-        printf("%c -> my : %d , original : %i\n" , i , ft_isdigit(i) ,isdigit(i) ) ; 
-    }
+//     for (int i = '0'; i < '9'; i++)
+//     {
+//         printf("%c -> my : %d , original : %i\n" , i , ft_isdigit(i) ,isdigit(i) ) ; 
+//     }
     
 
-    // printf("my function : -> %d\n", ft_isdigit(2)) ; 
-    // printf("original : -> %d\n", isdigit(2)) ; 
-    // printf("my function : -> %d\n", ft_isdigit('a')) ; 
-    // printf("original : -> %d\n", isdigit('a')) ; 
+//     // printf("my function : -> %d\n", ft_isdigit(2)) ; 
+//     // printf("original : -> %d\n", isdigit(2)) ; 
+//     // printf("my function : -> %d\n", ft_isdigit('a')) ; 
+//     // printf("original : -> %d\n", isdigit('a')) ; 
 
-    return 0 ;   
-}
+//     return 0 ;   
+// }

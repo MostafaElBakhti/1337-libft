@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 19:16:49 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/10/23 20:19:02 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 06:26:15 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,9 +60,3 @@ char *ft_itoa(int n){
     
     return ptr ; 
 }
-
-// int main(void){
-//     int num = -12345 ;
-//     char *str = ft_itoa(num) ;
-//     printf("%s\n" , str) ;
-// }

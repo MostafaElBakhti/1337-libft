@@ -6,7 +6,7 @@
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 13:39:08 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/11/04 18:18:42 by mel-bakh         ###   ########.fr       */
+/*   Updated: 2025/11/12 06:07:51 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 #include <stdio.h>
 #include <string.h>
 
-
-void    *ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*d;
 	const unsigned char	*s;
@@ -24,18 +23,17 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	d = (unsigned char *)dst;
 	s = (const unsigned char *)src;
 	i = 0;
-
-	if (!dst || !src)
-    	return NULL;
-
-	if(dst == src)
-		return dst ;
+	// if (!dst || !src)
+    // 	return (NULL);
 	
+	if(d == s)
+        return dst ;
+
 	if (d > s)
 	{
 		while (len > 0)
 		{
-			len--;
+			len-- ;
 			d[len] = s[len];
 		}
 		
@@ -50,13 +48,11 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 	
 	
 	return (dst);
-}
-int main(){
-    char src5[] = "123456";	
-	char dest[10] ;
-	ft_memmove(src5 + 2 , src5, 4); 
-	// src5[2] = '\0'
-    printf("src5 = '%s'\n", src5); 
-
-
-}
+}  
+// int main(){
+// 	// char dst[] = "test" ; 
+// 	char src[] = "hello" ; 
+// 	printf("my function : %s\n" ,ft_memmove(src,src+2,3)) ; 
+// 	printf("original : %s\n" ,memmove(src,src+2,3)) ; 
+// 	printf(" %s\n", src) ; 
+// }

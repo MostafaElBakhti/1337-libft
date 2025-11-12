@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mel-bakh <mel-bakh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 13:39:02 by mel-bakh          #+#    #+#             */
-/*   Updated: 2025/11/12 06:07:00 by mel-bakh         ###   ########.fr       */
+/*   Created: 2025/11/08 12:06:42 by mel-bakh          #+#    #+#             */
+/*   Updated: 2025/11/12 06:26:38 by mel-bakh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+{
+	if (!s || !f)
+		return ;
 
-int ft_isprint(int c){
-    if((c >= 32 && c <= 126)  ){
-        return 1 ; 
-    }
-    return 0 ;
+	unsigned int i = 0;
+	while (s[i])
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
+// void to_upper(unsigned int i , char *c)
+// {
+//     (void)i ; 
+// 	if (*c >= 'a' && *c <= 'z')
+// 		*c = *c - 32;
 
-// int main(void  ){
-//     printf("%d\n", ft_isprint(2)) ; 
-//     printf("%d\n", ft_isprint('a')) ; 
-//     printf("%d\n", ft_isprint('s')) ; 
-//     printf("%d\n", ft_isprint('0')) ; 
-//     printf("%d\n", ft_isprint('5')) ; 
-//     return 0 ;   
 // }
