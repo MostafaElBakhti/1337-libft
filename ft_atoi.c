@@ -10,13 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h> // atoi original
-#include "libft.h"   // ft_atoi
-
-
 #include "libft.h"
 
 static int	ft_itsspace(char c)
@@ -26,70 +19,29 @@ static int	ft_itsspace(char c)
 
 int	ft_atoi(const char *str)
 {
-	long long tmp ; 
-	long long value = 0 ; 
-	int sign = 1 ;
+	long long	tmp;
+	long long	value;
+	int			sign;
 
+	value = 0;
+	sign = 1;
 	while (ft_itsspace(*str))
-	{
-		str++ ; 
-	}
-
+		str++;
 	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
-		{
-			sign = -sign ;
-		}
-		str++ ; 
+			sign = -sign;
+		str++;
 	}
-	
 	while (*str >= '0' && *str <= '9')
 	{
-		tmp = value ; 
-		value = value * 10 + (*str - '0') ;
-
-		if(value < tmp && sign == 1){
-			return (-1) ; // overflow positif 
-		}
-		if(value < tmp && sign == -1){
-			return (0) ; // overflow negative 
-		}
-		str++ ; 
+		tmp = value;
+		value = value * 10 + (*str - '0');
+		if (value < tmp && sign == 1)
+			return (-1);
+		if (value < tmp && sign == -1)
+			return (0);
+		str++;
 	}
-	
-	return ((int)value * sign) ;
-	
+	return (value * sign);
 }
-// 2147483640 =	0111 1110	1010 0100	0101 1101	1000 1000
-//	add 9     	0000 0000	0000 0000	0000 0000	0000 1001 
-// ------------------------------------------------------------
-//	=== =     	0111 1110	1010 0100	0101 1101	1001 0001 
-
-
-
-// int main(void)
-// {
-// 	printf("Test 1: %d\n", ft_atoi("9223372036854775807"));
-// 	printf("Test 1: %d\n", atoi("9223372036854775807"));
-// 	printf("========= new test ==========\n") ;
-// 	printf("Test 7: %d\n", ft_atoi("21474836488"));
-// 	printf("Test 7: %d\n", atoi("21474836488"));
-// 	printf("========= new test ==========\n") ;
-// 	printf("Test 7: %d\n", ft_atoi("9223372036854775807"));
-// 	printf("Test 7: %d\n", atoi("9223372036854775807 "));
-// 	printf("========= new test ==========\n") ;
-// 	printf("Test 7: %d\n", ft_atoi("-21474836489"));
-// 	printf("Test 7: %d\n", atoi("-21474836489"));
-// 	printf("========= new test ==========\n") ;
-// 	printf("Test 7: %d\n", ft_atoi("-2147483648900"));
-// 	printf("Test 7: %d\n", atoi("-2147483648900"));
-
-// }
-
-
-
-//  011111111 111111111 111111111 111111111
-//+ 							  000000001
-// _________________________________________
-//=100000000  000000000 000000000 000000000   = ??

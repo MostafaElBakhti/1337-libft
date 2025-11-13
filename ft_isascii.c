@@ -11,26 +11,10 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <ctype.h>
 
-
-int ft_isascii(int c){
-    if((c >= 0 && c <= 127)  ){
-        return 1 ; 
-    }
-    return 0 ;
+int	ft_isascii(int c)
+{
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }
-
-// int main(void  ){
-//     for (int i = 0; i <= 255; i++)
-//         printf("%d -> my : %d , original : %i\n" , i , ft_isascii(i) ,isascii(i) ) ;
-    
-
-//     return 0 ;   
-// }
-    // printf("%d\n", ft_isalnum(2)) ; 
-    // printf("%d\n", ft_isalnum('a')) ; 
-    // printf("%d\n", ft_isalnum('s')) ; 
-    // printf("%d\n", ft_isalnum('0')) ; 
-    // printf("%d\n", ft_isalnum(' ')) ; 

@@ -12,28 +12,27 @@
 
 #include "libft.h"
 #include <stdio.h>
+#include <stdlib.h>
 
-void *ft_calloc(size_t count, size_t size){
-    // if bzaaaf return NULL ;
-    size_t total = count * size ; 
-    char *ptr = malloc(total) ; 
-    if (!ptr)
-    {
-        return NULL ; 
-    }
-    // size_t i = 0 ;
-    ft_bzero(ptr ,total ) ; 
+void	*ft_calloc(size_t count, size_t size)
+{
+	char	*ptr;
+	size_t	total;
 
-    return ptr ; 
-    
+	if (size != 0 && count > SIZE_MAX / size)
+		return (NULL);
+	total = count * size;
+	if (count == 0 || size == 0)
+	{
+		ptr = malloc(1);
+		if (!ptr)
+			return (NULL);
+		ft_bzero(ptr, 1);
+		return (ptr);
+	}
+	ptr = (char *)malloc(total);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, total);
+	return (ptr);
 }
-
-// int main(){
-//     char *test = ft_calloc(3, sizeof(char));
-
-//     for (int i = 0; i < 3; i++)
-//         printf("%d ", test[i]); 
-
-//     free(test);
-//     return 0;
-// }

@@ -11,29 +11,19 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    unsigned char ch = (unsigned char)c ;
-    while (*s)
-    {
-        if (*s == ch)
-        {
-            return (char *)s ;
-        }
-        s++;
-    }   
-    if (ch == '\0')
-    {
-        return (char *)s ;
-    }
-    
-    return NULL ;
-    
+	unsigned char	ch;
+
+	ch = (unsigned char)c;
+	while (*s)
+	{
+		if (*s == ch)
+			return ((char *)s);
+		s++;
+	}
+	if (ch == '\0')
+		return ((char *)s);
+	return (NULL);
 }
-// int main(void){
-//     printf("%s\n" , ft_strchr("hello" , 1024) ) ;
-//     printf("%s" , strchr("hello"  , 1024) ) ;
-// }

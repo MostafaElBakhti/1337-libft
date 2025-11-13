@@ -17,8 +17,10 @@ char	*ft_strdup(const char *s)
 	char	*new_str;
 	size_t	i;
 
+	if (!s)
+		return (NULL);
 	new_str = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!new_str || !s)
+	if (!new_str)
 		return (NULL);
 	i = 0;
 	while (s[i])
@@ -29,9 +31,3 @@ char	*ft_strdup(const char *s)
 	new_str[i] = '\0';
 	return (new_str);
 }
-// int main(void){
-//     char *s1 = "hello" ; 
-//     char *test = ft_strdup(s1) ; 
-//     printf("%s" , test ) ; 
-//     return 0 ; 
-// }

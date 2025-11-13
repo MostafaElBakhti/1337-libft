@@ -11,16 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    write(fd,&c,1) ; 
+	write(fd, &c, 1);
 }
-
-// int main()
-// {
-//     int fd = open("test.txt", O_CREAT | O_WRONLY | O_APPEND, 0777);
-//     ft_putchar_fd('c',1) ;
-//     close(fd) ;
-// }

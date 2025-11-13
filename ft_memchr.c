@@ -19,7 +19,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	unsigned char	*cs;
 	unsigned char	cc;
 	size_t			i;
-// dont handle NULL
+
 	cs = (unsigned char *)s;
 	cc = (unsigned char)c;
 	i = 0;
@@ -32,6 +32,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 // int main (){
-// 	printf("%s",ft_memchr(NULL, 'h' ,7));
-// 	printf("%s",memchr(NULL, 'h' ,7));
+// 	printf("%s\n",ft_memchr("tðst", 240 ,2));
 // }
