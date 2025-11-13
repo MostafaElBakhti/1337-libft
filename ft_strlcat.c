@@ -43,7 +43,6 @@ size_t ft_strlcat(char *dst, const char *src, size_t size){
     
 }
 
-
 // int main(void){
 //     char dest[6] = "Hi ";
 //     char src[] = "World";
