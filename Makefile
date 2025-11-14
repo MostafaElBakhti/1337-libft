@@ -7,7 +7,6 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
 
-
 ###   test 
 
 SRCS = $(wildcard *.c)
@@ -32,5 +31,5 @@ fclean: clean
 	$(RM) $(NAME)
 	@echo " libft.a removed."
 
-##  re : fclean all
-# .PHONY
+re: fclean all
+# .PHONY: all clean fclean re

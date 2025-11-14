@@ -11,52 +11,56 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-size_t count_len(int c)
+static size_t	count_len(int c)
 {
-    size_t len = 0 ;
-    long num = c ;
-    if (num <= 0)
-    {
-        len = 1 ;
-    }
+	size_t		len;
+	long long	num;
 
-    while (num)
-    {
-        num/= 10 ;
-        len++ ; 
-    }
-    return len ; 
+	len = 0;
+	num = c;
+	if (num <= 0)
+		len = 1;
+	if (num < 0)
+		num = -num;
+	while (num)
+	{
+		num /= 10;
+		len++;
+	}
+	return (len);
 }
 
-char *ft_itoa(int n){
+static void	fill_digits(char *ptr, long long num, size_t len)
+{
+	while (num > 0)
+	{
+		len--;
+		ptr[len] = (num % 10) + '0';
+		num /= 10;
+	}
+}
 
-    size_t len = count_len(n) ; 
-    // printf("length : %d" , len ) ; 
+char	*ft_itoa(int n)
+{
+	size_t		len;
+	char		*ptr;
+	long long	num;
 
-    char *ptr = malloc((len + 1)  * sizeof(char)) ; 
-    if(!ptr)
-        return NULL ; 
-    
-    ptr[len] = '\0' ; 
-
-    long num = n ; 
-    if(num == 0)
-        ptr[0] = '0' ;
-    if(num < 0 ){
-        ptr[0] = '-' ;
-        num = -num ;
-    }
-
-    while (num > 0)
-    {
-        
-        len-- ;
-        ptr[len] = (num % 10) + '0' ;
-        num/= 10 ;
-    }
-    
-    return ptr ; 
+	len = count_len(n);
+	ptr = malloc((len + 1) * sizeof(char));
+	if (!ptr)
+		return (NULL);
+	ptr[len] = '\0';
+	num = n;
+	if (num == 0)
+		ptr[0] = '0';
+	if (num < 0)
+	{
+		ptr[0] = '-';
+		num = -num;
+	}
+	if (num > 0)
+		fill_digits(ptr, num, len);
+	return (ptr);
 }

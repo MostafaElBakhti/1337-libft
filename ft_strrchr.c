@@ -12,30 +12,20 @@
 
 #include "libft.h"
 
+char	*ft_strrchr(const char *s, int c)
+{
+	const char		*test;
+	unsigned char	ch;
 
-
-char *ft_strrchr(const char *s, int c){
-    const char *test = NULL ;
-    unsigned char ch = (unsigned char)c ;
-    while (*s)
-    {
-        if (*s == ch)
-        {
-            test = s ;
-        }
-        s++ ;
-    }
-
-    if(ch == '\0')
-        return (char *)s ;
-
-    return (char *)test ;
+	test = NULL;
+	ch = (unsigned char)c;
+	while (*s)
+	{
+		if (*s == ch)
+			test = s;
+		s++;
+	}
+	if (ch == '\0')
+		return ((char *)s);
+	return ((char *)test);
 }
-
-
-// int main(void){
-//     char *s = "test" ;
-//     char c = 'e' ; 
-//     char *test = strrchr(s , c) ; 
-//     printf("%s" , test) ; 
-// }

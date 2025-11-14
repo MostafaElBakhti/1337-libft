@@ -11,36 +11,23 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
+	size_t	i;
+	size_t	j;
+
 	if (!*to_find)
-	{
-		return (char *)str ;
-	}
-	size_t i = 0 ; 
-	size_t j ; 
+		return ((char *)str);
+	i = 0;
 	while (i < len && str[i])
 	{
-		j = 0 ;
+		j = 0;
 		while (to_find[j] && (i + j) < len && str[i + j] == to_find[j])
-		{
-			j++ ;
-		}
-		if(!to_find[j])
-			return ((char *)(str + i)) ;
-
-		i++ ; 
+			j++;
+		if (!to_find[j])
+			return ((char *)(str + i));
+		i++;
 	}
-	
-	return NULL ; 
-
+	return (NULL);
 }
-
-// int main(){
-// 	char str[] = "hello world" ; 
-// 	char to_find[] = "world" ; 
-// 	char *test = ft_strnstr(str , to_find , sizeof(str)) ; 
-// 	printf("%s" , test) ; 
-// }

@@ -11,43 +11,21 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
 
-  
+char	*ft_strtrim(char const *s1, char const *set)
+{
+	size_t	len;
+	char	*copy;
 
-char *ft_strtrim(char const *s1, char const *set){
-    if (!set || !s1)
-    {
-        return NULL ; 
-    }
-
-    while (*s1 && ft_strchr(set , *s1))
-        s1++ ;
-    
-    size_t len = ft_strlen(s1) ; 
-
-    while (len > 0 && ft_strchr(set , s1[len-1]))
-    {
-        len-- ; 
-    }
-    
-    char *copy = malloc(len + 1 ) ; 
-    if(!copy)
-        return NULL; 
-    
-    ft_memcpy(copy , s1 , len) ; 
-    copy[len] = '\0' ; 
-
-    return copy ; 
-    
-    
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	len = ft_strlen(s1);
+	while (len > 0 && ft_strchr(set, s1[len - 1]))
+		len--;
+	copy = malloc(len + 1);
+	if (!copy)
+		return (NULL);
+	ft_memcpy(copy, s1, len);
+	copy[len] = '\0';
+	return (copy);
 }
-
-// int  main(){
-//     char *s1 = "//hello world//" ;
-//     char *set = "/" ;
-//     char *test = ft_strtrim(s1 , set) ;
-//     printf("final results is :%s\n" , test) ;
-
-// }   
