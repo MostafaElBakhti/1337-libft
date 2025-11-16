@@ -16,3 +16,8 @@ void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
+
+// open("text.txt" , )
+
+// fd positive int value that give us the index of the file opened and stored in 
+// table of file discriptors 

@@ -4,7 +4,7 @@
 
 # The name of the output library
 # static library
-NAME = libft.a # >>! static library
+NAME = libft.a 
 # The compiler to use
 CC = cc 
 # Compiler flags: show all warnings, treat warnings as errors
@@ -19,7 +19,8 @@ RM = rm -f
 # All .c files in the directory
 SRCS = $(wildcard *.c)
 # All .o files corresponding to .c files
-OBJS = $(SRCS:.c=.o) #! pattern substitution 
+OBJS = $(SRCS:.c=.o) 
+# pattern substitution 
 
 # (Unused comment line)
 ## start make all 
@@ -27,6 +28,8 @@ OBJS = $(SRCS:.c=.o) #! pattern substitution
 # Default target: build the library
 all: $(NAME)
 
+$(NAME) : $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 # Rule to build .o files from .c files (depends on libft.h)
 # $< is the source file, $@ is the target object file
 %.o: %.c libft.h
@@ -35,19 +38,14 @@ all: $(NAME)
 # Rule to build the library from object files
 # ar rcs creates the static library
 # Echo a message when done
-$(NAME) : $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-	@echo "siiiiiiiii"
 
 # Remove all object files
 clean:
-	$(RM) $(OBJS)	
-	@echo " Object files removed."
+	$(RM) $(OBJS)
 
 # Remove object files and the library
 fclean: clean
 	$(RM) $(NAME)
-	@echo " libft.a removed."
 
 # Rebuild everything from scratch (force clean, then build all)
 re: fclean all

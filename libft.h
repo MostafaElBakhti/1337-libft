@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
 # include <limits.h>
 
 void	ft_putendl_fd(char *s, int fd);
