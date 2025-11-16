@@ -47,7 +47,4 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-# Rebuild everything from scratch (force clean, then build all)
 re: fclean all
-# (Optional) Declare phony targets (uncomment to use)
-# .PHONY: all clean fclean re
