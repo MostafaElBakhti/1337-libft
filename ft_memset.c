@@ -26,18 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-#include <stdio.h>
-int main()
-{
-
-	int g[4] = {102 , 2121, 5, 5} ; 
-	int  i = 1000;
-	char * hh= (char* )&i;
-	int h = 0;
-	while(h < 4)
-	{
-		ft_memset((char *)&g[1] + h, hh[h], 1);
-		h++;
-	} 
-	printf("%d", g[1]);
-}

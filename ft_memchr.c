@@ -29,11 +29,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main()
-// {
-// 	int arr[]={3456776465,57,265,24524};
-// 	printf(" 0 : %p\n", arr);
-// 	int *res = ft_memchr(arr,57,sizeof(arr));
-// 	// printf("%d",*res);
-// }

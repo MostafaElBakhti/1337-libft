@@ -35,8 +35,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
-
-// int main()
-// {
-// 	printf("%zu",ft_strlcat(NULL,"abcd",0));
-// }

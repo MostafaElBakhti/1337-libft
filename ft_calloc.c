@@ -21,17 +21,10 @@ void	*ft_calloc(size_t count, size_t size)
 		return (NULL);
 	total = count * size;
 	if (count == 0 || size == 0)
-	{
-		ptr = malloc(1);
-		if (!ptr)
-			return (NULL);
-		ft_bzero(ptr, 1);
-		return (ptr);
-	}
+		return (ft_strdup(""));
 	ptr = (char *)malloc(total);
 	if (!ptr)
 		return (NULL);
 	ft_bzero(ptr, total);
 	return (ptr);
 }
-// text segment 

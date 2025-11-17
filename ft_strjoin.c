@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*result;
 
 	if (s2 == NULL && s2 == NULL)
-			return(NULL) ;
+		return (NULL);
 	if (s1 == NULL)
 		len1 = 0;
 	if (s2 == NULL)
@@ -36,10 +36,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[len1 + len2] = '\0';
 	return (result);
 }
-
-// int main()
-// {
-// 	printf("%s\n" , ft_strjoin( NULL , NULL )) ; 
-
-
-// }

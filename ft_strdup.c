@@ -29,10 +29,3 @@ char	*ft_strdup(const char *s)
 	new_str[i] = '\0';
 	return (new_str);
 }
-
-// int main(){
-// 	printf("%s\n" , ft_strdup(NULL )) ; 
-// 	printf("%s\n" , strdup(NULL )) ; 
-// }
-
-//

@@ -30,10 +30,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-// int main()
-// {
-// 	char str[] = "str";
-// 	printf("%s" , ft_memcpy(str, str , 3)); 
-// 	printf("%s" , memcpy(str, str , 4)); 
-
-// }
