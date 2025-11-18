@@ -1,6 +1,5 @@
 
 NAME = libft.a
- 
 CC = cc 
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
@@ -22,7 +21,6 @@ all: $(NAME)
 	
 $(NAME) : $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-
 
 clean:
 	$(RM) $(OBJS)
