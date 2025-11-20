@@ -12,25 +12,29 @@
 
 #include "libft.h"
 
-char    *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    size_t len1 = 0;
-    size_t len2 = 0;
-    char *result;
-    if (!s1 && !s2)
-        return (NULL);
-    if (s1)
-        len1 = ft_strlen(s1);
-    if (s2)
-        len2 = ft_strlen(s2);
-    result = malloc(len1 + len2 + 1);
-    if (!result)
-        return (NULL);
-    if (s1)
-        ft_memcpy(result, s1, len1);
-    if (s2)
-        ft_memcpy(result + len1, s2, len2);
+	size_t	len1;
+	size_t	len2;
+	char	*result;
 
-    result[len1 + len2] = '\0';
-    return (result);
+	if (!s1 && !s2)
+		return (NULL);
+	if (s1 != NULL)
+		len1 = ft_strlen(s1);
+	else
+		len1 = 0;
+	if (s2 != NULL)
+		len2 = ft_strlen(s2);
+	else
+		len2 = 0;
+	result = (char *)malloc(len1 + len2 + 1);
+	if (!result)
+		return (NULL);
+	if (s1 != NULL)
+		ft_memcpy(result, s1, len1);
+	if (s2 != NULL)
+		ft_memcpy(result + len1, s2, len2);
+	result[len1 + len2] = '\0';
+	return (result);
 }
